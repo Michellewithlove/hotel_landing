@@ -1,5 +1,7 @@
 /* СБРОС */
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -103,6 +105,8 @@ body{
 /* телефон */
 
 .phone{
+    cursor: pointer;
+    opacity: .8;
     color: white;
 
     font-size: 18px;
@@ -275,14 +279,23 @@ body{
 /* ROOMS */
 
 .rooms-section{
-    background: white;
-    padding: 80px 0;
+
+    padding-top: 10px;
+    padding-bottom: 80px;
 }
 
 .rooms-title{
+
     font-size: 45px;
     font-weight: 600;
+
+    color: #5B8AA4;
+
     margin-bottom: 40px;
+
+    text-align: left;
+
+    margin-left: 260px;
 }
 
 /* ОБЩИЙ КОНТЕЙНЕР */
@@ -334,6 +347,8 @@ body{
 .slide-info{
     width: 50%;
     position: relative;
+
+    margin-top: 0px;
 }
 
 .slide-info img{
@@ -367,7 +382,7 @@ body{
     position: relative;
 
     margin-left: -60px;
-    margin-top: -30px;
+    margin-top: -200px;
     z-index: 2;
 }
 
@@ -378,4 +393,292 @@ body{
     border-radius: 25px;
 
     display: block;
+}
+
+/* БРОНИРОВАНИЕ */
+
+.booking-modal{
+    border-radius: 30px;
+    border: none;
+}
+
+.booking-modal .modal-title{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.booking-modal .form-control{
+    border-radius: 15px;
+    padding: 14px;
+}
+
+.submit-booking-btn{
+    width: 100%;
+
+    background: #5B8AA4;
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    padding: 14px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.submit-booking-btn:hover{
+    opacity: .9;
+}
+
+/* БЛОК С ПРЕИМУЩЕСТВАМИ */
+
+.advantages-image-section{
+    width: 100%;
+}
+
+.advantages-image-section img{
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* REVIEWS */
+
+.reviews-section{
+
+    background-image: url('../images/reviews-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+
+    position: relative;
+}
+
+.reviews-overlay{
+
+    background: rgba(255,255,255,0.5);
+
+    padding: 120px 0;
+}
+
+.reviews-title-image{
+
+    margin-bottom: 80px;
+    margin-left: -100px;
+}
+
+.reviews-title-image img{
+
+    width: auto;
+
+    height: 60px;
+
+    display: block;
+}
+
+.reviews-slider{
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.reviews-content{
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    height: 280px;
+}
+
+.review{
+    display: none;
+}
+
+.review.active{
+    display: block;
+}
+
+.review-text{
+
+    font-size: 30px;
+
+    line-height: 1.5;
+
+    color: black;
+
+    text-align: left;
+
+    margin-bottom: 40px;
+}
+
+.review-author{
+
+    text-align: right;
+
+    color: #9C9C9C;
+
+    font-size: 24px;
+
+    margin: 0;
+}
+
+/* стрелки */
+
+.review-arrow{
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #5B8AA4;
+
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+/* FOOTER */
+
+.footer{
+
+    background: #5B8AA4;
+
+    padding-top: 70px;
+    padding-bottom: 30px;
+
+    color: white;
+}
+
+.footer-content{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    margin-bottom: 60px;
+}
+
+.footer-column{
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer-column h3{
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+}
+
+.footer-column p,
+.footer-column a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+
+    line-height: 1.5;
+}
+
+.call-btn{
+
+    margin-top: 20px;
+
+    background: #AACBDD;
+
+    color: #000;
+
+    border: none;
+
+    border-radius: 30px;
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    width: fit-content;
+
+    transition: .3s;
+}
+
+.call-btn:hover{
+
+    transform: translateY(-2px);
+}
+
+.footer-bottom{
+
+    border-top: 1px solid rgba(255,255,255,.3);
+
+    padding-top: 25px;
+
+    font-size: 16px;
+}
+
+/* КНОПКА НАВЕРХ */
+
+#scrollTopBtn{
+
+    display: none;
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #5B8AA4;
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    z-index: 99999;
+
+    /* ВАЖНО — центрирование */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
 }

@@ -38,16 +38,22 @@
 
                 <nav class="nav-menu">
 
-                    <a href="#">Номера</a>
+                    <a href="#rooms">Номера</a>
                     <a href="#">Услуги</a>
                     <a href="#">Контакты</a>
                     <a href="#">Интересное рядом</a>
-                    <a href="#">Отзывы</a>
+                    <a href="#reviews">Отзывы</a>
 
                 </nav>
 
-                <div class="phone">
+                <div
+                    class="phone"
+
+                    data-bs-toggle="modal"
+                    data-bs-target="#callModal">
+
                     +7 (812) 314-74-72
+
                 </div>
 
             </div>
@@ -133,7 +139,7 @@
     </div>
 
 </section>
-<section class="rooms-section">
+<section class="rooms-section" id="rooms">
 
     <div class="container">
 
@@ -149,7 +155,12 @@
 
                     <div class="slide-info">
                         <img src="images/room1-info.jpg">
-                        <button class="book-btn">Забронировать</button>
+                        <button
+                            class="book-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Забронировать
+                        </button>
                     </div>
 
                     <div class="slide-photo">
@@ -162,7 +173,12 @@
 
                     <div class="slide-info">
                         <img src="images/room2-info.jpg">
-                        <button class="book-btn">Забронировать</button>
+                        <button
+                            class="book-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Забронировать
+                        </button>
                     </div>
 
                     <div class="slide-photo">
@@ -175,7 +191,12 @@
 
                     <div class="slide-info">
                         <img src="images/room3-info.jpg">
-                        <button class="book-btn">Забронировать</button>
+                        <button
+                            class="book-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Забронировать
+                        </button>
                     </div>
 
                     <div class="slide-photo">
@@ -193,5 +214,381 @@
     </div>
 
 </section>
+<!-- МОДАЛЬНОЕ ОКНО БРОНИ -->
+
+<div class="modal fade" id="bookingModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content booking-modal">
+
+            <div class="modal-header border-0">
+
+                <h5 class="modal-title">
+                    Бронирование номера
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="bookingForm">
+
+                    <div class="mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Имя"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Фамилия"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Номер телефона"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Дата заезда
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Дата выезда
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="submit-booking-btn">
+
+                        Отправить заявку
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+
+<script src="js/script.js"></script>
+<!-- ADVANTAGES IMAGE -->
+
+<section class="advantages-image-section">
+
+    <img
+        src="images/advantages.jpg"
+        alt="Преимущества гостиницы">
+
+</section>
+<!-- REVIEWS -->
+
+<section class="reviews-section" id="reviews">
+
+    <div class="reviews-overlay">
+
+        <div class="container">
+
+        <div class="reviews-title-image">
+
+            <img src="images/name.jpg" alt="Отзывы">
+
+        </div>
+
+        <div class="reviews-slider">
+
+            <button class="review-arrow review-prev">
+                &#10094;
+            </button>
+
+            
+
+            <div class="reviews-content">
+
+                <div class="review active">
+
+                    <p class="review-text">
+                        Идеальное расположение для прогулок по Петербургу. До Исаакия и Русского музея — 10–15 минут пешком. В номере скромно, но всё необходимое есть. Тихо, чисто, безопасно. Соотношение цена/качество в центре — одно из лучших.
+                    </p>
+
+                    <p class="review-author">
+                        — Мария Т.
+                    </p>
+
+                </div>
+
+                <div class="review">
+
+                    <p class="review-text">
+                        Очень понравилось расположение. Все основные достопримечательности буквально в пешей доступности. Персонал приветливый и всегда готов помочь.
+                    </p>
+
+                    <p class="review-author">
+                        — Александр К.
+                    </p>
+
+                </div>
+
+                <div class="review">
+
+                    <p class="review-text">
+                        Останавливались на несколько дней семьёй. Номер оказался чистым и уютным, а атмосфера гостиницы спокойной и комфортной.
+                    </p>
+
+                    <p class="review-author">
+                        — Елена В.
+                    </p>
+
+                </div>
+
+                <div class="review">
+
+                    <p class="review-text">
+                        Отличный вариант для тех, кто хочет жить в центре Петербурга без переплаты. Удобное заселение и хорошая транспортная доступность.
+                    </p>
+
+                    <p class="review-author">
+                        — Дмитрий С.
+                    </p>
+
+                </div>
+
+                <div class="review">
+
+                    <p class="review-text">
+                        Прекрасный вид на историческую часть города. Особенно понравилась тишина вечером и близость к набережным.
+                    </p>
+
+                    <p class="review-author">
+                        — Наталья П.
+                    </p>
+
+                </div>
+
+                <div class="review">
+
+                    <p class="review-text">
+                        Бронировали номер во время отпуска. Всё соответствовало описанию на сайте. Обязательно вернёмся снова.
+                    </p>
+
+                    <p class="review-author">
+                        — Сергей Л.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button class="review-arrow review-next">
+                &#10095;
+            </button>
+
+        </div>
+
+    </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <!-- МЕНЮ -->
+
+            <div class="footer-column">
+
+                <h3>Меню</h3>
+
+                <a href="#">Номера</a>
+                <a href="#">Услуги</a>
+                <a href="#">Контакты</a>
+                <a href="#">Интересные места</a>
+                <a href="#">Отзывы</a>
+
+            </div>
+
+            <!-- КОНТАКТЫ -->
+
+            <div class="footer-column">
+
+                <h3>Контакты</h3>
+
+                <p>Казанская улица, 6, Санкт-Петербург</p>
+
+                <p>+7 (812) 314-74-72</p>
+
+                <p>ogt_herzen@mail.ru</p>
+
+                <a href="#">
+                    Посмотреть на карте
+                </a>
+
+            </div>
+
+            <!-- ГРАФИК -->
+
+            <div class="footer-column">
+
+                <h3>График работы</h3>
+
+                <p>Круглосуточно</p>
+
+                <p>Расчетный час – 12:00</p>
+
+                <p>Заезд с 14:00, выезд до 12:00</p>
+
+                <button
+                    class="call-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#callModal">
+
+                    Заказать звонок
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            2026 © Все права защищены
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО ЗВОНКА -->
+
+<div class="modal fade" id="callModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content booking-modal">
+
+            <div class="modal-header border-0">
+
+                <h5 class="modal-title">
+                    Заказать звонок
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="callForm">
+
+                    <div class="mb-3">
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Имя"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Фамилия"
+                            required>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Номер телефона"
+                            required>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="submit-booking-btn">
+
+                        Заказать звонок
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<button id="scrollTopBtn">
+    ↑
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
 </body>
 </html>
